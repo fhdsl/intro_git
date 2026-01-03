@@ -6,49 +6,49 @@ format:
     incremental: true
     footer: "https://github.com/fhdsl/cookbook_summer_2025"
 ---
+
 ## Introduce Yourself In Chat
 
-- Your Name/Group/Pronouns
-- How did you spend Juneteenth weekend?
-- What you hope to learn today
+-   Your Name/Group/Pronouns
+-   What you hope to learn today
 
 ## Who is this workshop for?
 
-- Those who want a basic understanding of the version control process
-- Those who want to understand how open source collaboration works
-- Those who need to build a mental model of Git
+-   Those who want a basic understanding of the version control process
+-   Those who want to understand how open source collaboration works
+-   Those who need to build a mental model of Git
 
 . . .
 
 Not for:
 
-- People who already use Git on the command line (you already have the mental model)
-- Impatient people
+-   People who already use Git on the command line (you already have the mental model)
+-   Impatient people
 
 ## Learning Objectives
 
 By the end of this workshop, you will be able to:
 
-- **Explain** the reasons we use repositories
-- **Explain** how version control tracks changes in your work
-- **Make** a branch in a repository
-- **Make** a fork of a repository that you don't own
-- **Make** contributions to a repository using pull requests 
+-   **Explain** the reasons we use repositories
+-   **Explain** how version control tracks changes in your work
+-   **Make** a branch in a repository
+-   **Make** contributions to a repository using pull requests
+-   (If time) **Make** a fork of a repository that you don't own
 
 ## Reminder: Be gentle with yourself and others
 
-- [Participation Guidelines](https://hutchdatascience.org/communitystudios/guidelines/)
-- We are all learning together
-- We all learn at different paces
-- Asking questions is a way of taking care of others
+-   [Participation Guidelines](https://hutchdatascience.org/communitystudios/guidelines/)
+-   We are all learning together
+-   We all learn at different paces
+-   Asking questions is a way of taking care of others
 
 ## Our focus today is on concepts
 
-- Intermediate Git is much more about how you do it
+-   Intermediate Git is much more about how you do it
 
 ## Reproducibility and the Research Lifecycle
 
-![](research-cycle-eaf698fd0d1a6927d2a3292efd524df1.svg){width=600}
+![](research-cycle-eaf698fd0d1a6927d2a3292efd524df1.svg){width="600"}
 
 ::: aside
 [The Turing Way Community](https://doi.org/10.5281/ZENODO.3332807)
@@ -56,16 +56,15 @@ By the end of this workshop, you will be able to:
 
 ## Benefits of Storing your code in a Repo
 
-- Centralized code
-- Other people outside your lab can use it
-- The ability to roll back changes that broke your code
-- Recognition for your work
-- Supportive community that can help you learn and improve it
-
+-   Centralized code
+-   Other people outside your lab can use it
+-   The ability to roll back changes that broke your code
+-   Recognition for your work
+-   Supportive community that can help you learn and improve it
 
 ## It's Tough being Open
 
-![](make-ok-to-be-human-adfed37c7f9fe42485a1e3e6ad869a2b.png){width=700}
+![](make-ok-to-be-human-adfed37c7f9fe42485a1e3e6ad869a2b.png){width="700"}
 
 ::: aside
 [Scientific Data in 2017. Used under a CC-BY 4.0 license](https://doi.org/10.6084/M9.FIGSHARE.5577340.V1)
@@ -73,7 +72,7 @@ By the end of this workshop, you will be able to:
 
 ## But it's also rewarding
 
-![](help-you-of-the-futu-1d37c78e2b60bc56e20c20be250182b5.png){width=700}
+![](help-you-of-the-futu-1d37c78e2b60bc56e20c20be250182b5.png){width="700"}
 
 ::: aside
 [Scientific Data in 2017. Used under a CC-BY 4.0 license](https://doi.org/10.6084/M9.FIGSHARE.5577340.V1)
@@ -81,24 +80,24 @@ By the end of this workshop, you will be able to:
 
 ## Version Control
 
-> Version control is a systematic approach to record changes made in a file, or set of files, over time. This allows you and your collaborators to track the history, see what changed, and recall specific versions later when needed.  
+> Version control is a systematic approach to record changes made in a file, or set of files, over time. This allows you and your collaborators to track the history, see what changed, and recall specific versions later when needed.
 
 ::: aside
 [The Turing Way](https://book.the-turing-way.org/reproducible-research/vcs/vcs-workflow)
 :::
 
-## Ways we work with version control 
+## Ways we work with version control
 
-- **By ourselves (sole developer)**
-- As a member of a GitHub repository
-- As an external collaborator of a GitHub repository
+-   **By ourselves (sole developer)**
+-   As a member of a GitHub repository
+-   As an external collaborator of a GitHub repository
 
 ## Version Control Workflow (by ourselves)
 
-1. Create files - these may contain text, code or both.
-2. Work on these files, by changing, deleting or adding new content.
-3. Create a snapshot of the file status (also known as version) at this time.
-4. Document what was changed in the version history of that file.
+1.  Create files - these may contain text, code or both.
+2.  Work on these files, by changing, deleting or adding new content.
+3.  Create a snapshot of the file status (also known as version) at this time.
+4.  Document what was changed in the version history of that file.
 
 ::: aside
 [The Turing Way](https://book.the-turing-way.org/reproducible-research/vcs/vcs-workflow)
@@ -110,10 +109,11 @@ By the end of this workshop, you will be able to:
 
 ## Git is a formal way of tracking changes
 
-- Each "save" is called a **commit**
-- Basically a snapshot of the file at that moment in time
-- We have one file, but many versions of that file
-- We only track changes in the file, not save the entire file
+-   Each "save" is called a **commit**
+-   Basically a snapshot of the file at that moment in time
+-   We have one file, but many versions of that file
+-   We only track changes in the file, not save the entire file
+-   We can **revert** changes associated with a commit
 
 ![](main-branch-bf6b49a2efd6b2dc9e311e7a666e2b52.png)
 
@@ -121,90 +121,51 @@ By the end of this workshop, you will be able to:
 
 Git only tracks what's changed between commits (called a **diff**):
 
-- Lines of code we add (+)
-- Lines of code we delete (-)
+-   Lines of code we add (+)
+-   Lines of code we delete (-)
 
 ## Diff Example
 
-![Diff Example](diff.png){width=800}
+![Diff Example](diff.png){width="800"}
 
-## We can fix mistakes
+## Exercise: Create a repository and make a commit
 
-![](main-branch-bf6b49a2efd6b2dc9e311e7a666e2b52.png)
+<https://github.com/new>
 
-- What if we made a mistake in code?
-- We can **roll back** or **revert** changes associated with a commit
+## Exercise: Look at a complex commit history
 
-## Exercise: Look at a commit history
-
-- [Exploring Github Exercise](exploring.html)
-
-## More about commits
-
-- Commits have a **message**
-- Commits can be done for multiple files at once
-
-## There is an intermediate step: staging
-
-- Exists to bundle multiple changes to a single commit
-- Is hidden in the web interface
-
-![](staging.png)
-
-::: aside
-<https://git-scm.com/about/staging-area>
-:::
+-   [Exploring Github Exercise](exploring.html)
 
 ## Ways we work in a repository
 
-- By ourselves (sole developer)
-- **As a member of a GitHub repository**
-- As an external collaborator of a GitHub repository
+-   By ourselves (sole developer)
+-   **As a member of a GitHub repository**
+-   As an external collaborator of a GitHub repository
 
 ## Git / GitHub is a way for multiple developers to work together
 
-- Everything we've done so far we've done by ourselves
-- The key with Git/GitHub is that multiple people can work on a repository at once
+-   Everything we've done so far we've done by ourselves
+-   The key with Git/GitHub is that multiple people can work on a repository at once
 
-## What is the difference between Git / GitHub?
+## How do we do this?
 
-- Git is the software that does version control
-  - Use it on our own machines with command line git, Git Desktop, RStudio, etc.
-- GitHub is the website that hosts repositories and it uses Git
-  - Hosted repository is also called the **remote**
-
-
-## Interacting with GitHub
-
-```{mermaid}
-%%| echo: false
-graph LR
-  A[Our local machine] --git push ---> B
-  B["Remote Repo on GitHub"] --git pull--> A
-```
-
-- Updating the *remote* from our *local* is called a **push**
-- Updating the *local* from the *remote* is called a **pull**
-
-## How do we do this? 
-
-- Multiple people can work on their own versions of the code called **branches**
-- Developers can work on different features on the same code
-- Needs a reconciliation process (pull requests/merging)
+-   Multiple people can work on their own versions of the code called **branches**
+-   Developers can work on different features on the same code
+-   Needs a reconciliation process (pull requests/merging)
 
 ## Branches are isolated versions of the original repository
 
-![](one-branch.png) 
+![](one-branch.png)
 
 ## Many People Can Work on the Same Code
 
-- Working on different branches
+-   Working on different branches
 
 ![](sub-branch-591cc047cf4f699fc4652eae25e2745d.png)
 
 ## When in doubt, branch
 
-- Before you make big changes, make a branch
+-   Before you make big changes, make a branch
 
 ## Exercise: Add a Recipe to our Cookbook Repository!
 
@@ -212,14 +173,14 @@ graph LR
 
 Everyone is a member of this repository:
 
-  - [cookbook_summer_2025](https://github.com/fhdsl/cookbook_summer_2025)
+-   [cookbook_summer_2025](https://github.com/fhdsl/cookbook_summer_2025)
 
 [Exercise: Add a Recipe](branching.html)
 
 ## Make a Pull Request
 
-- A **pull request** is a formal request to merge your code changes into the history
-- Someone (the owner) needs to merge your changes after a request
+-   A **pull request** is a formal request to merge your code changes into the history
+-   Someone (the owner) needs to merge your changes after a request
 
 ## Exercise: Make a Pull Request
 
@@ -227,60 +188,62 @@ Everyone is a member of this repository:
 
 ## Now comes the hard part
 
-- Integrating the changes from multiple branches
+-   Integrating the changes from multiple branches
 
 ## Reconciliation of Branches (merging)
 
 ![](one-branch-9bf2286640c44169cd8255c9d4264780.png)
 
-- Need to integrate changes in branches together
-- This is called a **merge**
+-   Need to integrate changes in branches together
+-   This is called a **merge**
 
 ## Who's responsible for merging?
 
-- Repository Owner 
-  - Could be *program manager* of a group
-  - Could be a *software engineer*
-- It is a big responsibility
-  - Need to ensure that merge doesn't break things
-    - Use automated testing to ensure changes don't break code
-  - Need to make sure that merges don't conflict
-    - Reconciling changes so that they work together
-    
+-   Repository Owner
+    -   Could be *program manager* of a group
+    -   Could be a *software engineer*
+-   It is a big responsibility
+    -   Need to ensure that merge doesn't break things
+        -   Use automated testing to ensure changes don't break code
+    -   Need to make sure that merges don't conflict
+        -   Reconciling changes so that they work together
+
 ## Branching/Merging works because of communication
 
-- You need to communicate with other developers which part of the code you're working on
-- Partition out the tasks
-- Multiple developers working on the same part of the code can be difficult
+-   You need to communicate with other developers which part of the code you're working on
+-   Partition out the tasks
+-   Multiple developers working on the same part of the code can be difficult
 
 ## Merging process
 
-- Manual review process
-  - May start a conversation about the pull request
-  - May submit reviews
-  - May submit approvals
-  - May deny the pull request
+May involve...
+
+-   Converse about the Pull Request
+
+-   Particiapte in Code Reviews
+
+-   Approve or Deny the Pull Request
 
 # Merging Demo
 
 ## Ways we work in a repository
 
-- By ourselves (sole developer)
-- As a member of a GitHub repository
-- **As an external collaborator of a GitHub repository**
+-   By ourselves (sole developer)
+-   As a member of a GitHub repository
+-   **As an external collaborator of a GitHub repository**
 
 ## GitHub lets you contribute to code, even if you aren't a member
 
-- You can still contribute to code you don't own
-  - Open source is built on collaborations
-- You can do this by making a *fork* of the code
+-   You can still contribute to code you don't own
+    -   Open source is built on collaborations
+-   You can do this by making a *fork* of the code
 
 ## Forks
-  
-- Your version of the code is called a *fork* - it belongs to you
-  - Like an external *branch*
-  - The fork belongs to you
-- Can submit your changes to the code through a *pull request* to the original repository:
+
+-   Your version of the code is called a *fork* - it belongs to you
+    -   Like an external *branch*
+    -   The fork belongs to you
+-   Can submit your changes to the code through a *pull request* to the original repository:
 
 ![](fork6-pr.jpg)
 
@@ -288,14 +251,14 @@ Everyone is a member of this repository:
 
 Hopefully you will now be able to
 
-- **Explain** the reasons we use repositories
-- **Explain** how version control tracks changes in your work
-- **Make** a branch in a repository
-- **Make** contributions to a repository using pull requests 
-- **Make** a fork of a repository that you don't own
+-   **Explain** the reasons we use repositories
+-   **Explain** how version control tracks changes in your work
+-   **Make** a branch in a repository
+-   **Make** contributions to a repository using pull requests
+-   **Make** a fork of a repository that you don't own
 
 ## Resources
 
-- [How Git Works](https://wizardzines.com/zines/git/)
-- [Happy Git With R](https://happygitwithr.com/)
-- [Please Merge Before I start Crying](https://www.youtube.com/watch?v=y2qdvYKKVdc)
+-   [How Git Works](https://wizardzines.com/zines/git/)
+-   [Happy Git With R](https://happygitwithr.com/)
+-   [Please Merge Before I start Crying](https://www.youtube.com/watch?v=y2qdvYKKVdc)
