@@ -132,6 +132,8 @@ Git only tracks what's changed between commits (called a **diff**):
 
 <https://github.com/new>
 
+-   Create README.md
+
 ## Exercise: Look at a complex commit history
 
 -   [Exploring Github Exercise](exploring.html)
