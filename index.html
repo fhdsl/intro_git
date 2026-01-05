@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-2b3e328b71be8d25427581baeb23079b.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.7.30">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-dark-707d8167ce6003fca903bfe2be84ab7f.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.25">
 
   <title>Learning Git and GitHub</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -28,7 +28,7 @@
       vertical-align: middle;
     }
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-4b7f179142f17ca251a37dc34c50596b.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-cfd31a45aad5dab724bf9591297a3541.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -120,9 +120,6 @@
       margin-right: 0; 
     }
   </style>
-  <script src="index_files/libs/quarto-diagram/mermaid.min.js"></script>
-  <script src="index_files/libs/quarto-diagram/mermaid-init.js"></script>
-  <link href="index_files/libs/quarto-diagram/mermaid.css" rel="stylesheet">
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -139,7 +136,6 @@
 <h2>Introduce Yourself In Chat</h2>
 <ul>
 <li class="fragment">Your Name/Group/Pronouns</li>
-<li class="fragment">How did you spend Juneteenth weekend?</li>
 <li class="fragment">What you hope to learn today</li>
 </ul>
 </section>
@@ -165,8 +161,8 @@
 <li class="fragment"><strong>Explain</strong> the reasons we use repositories</li>
 <li class="fragment"><strong>Explain</strong> how version control tracks changes in your work</li>
 <li class="fragment"><strong>Make</strong> a branch in a repository</li>
-<li class="fragment"><strong>Make</strong> a fork of a repository that you don’t own</li>
 <li class="fragment"><strong>Make</strong> contributions to a repository using pull requests</li>
+<li class="fragment">(If time) <strong>Make</strong> a fork of a repository that you don’t own</li>
 </ul>
 </section>
 <section id="reminder-be-gentle-with-yourself-and-others" class="slide level2">
@@ -255,6 +251,7 @@
 <li class="fragment">Basically a snapshot of the file at that moment in time</li>
 <li class="fragment">We have one file, but many versions of that file</li>
 <li class="fragment">We only track changes in the file, not save the entire file</li>
+<li class="fragment">We can <strong>revert</strong> changes associated with a commit</li>
 </ul>
 
 <img data-src="main-branch-bf6b49a2efd6b2dc9e311e7a666e2b52.png" class="r-stretch"></section>
@@ -270,38 +267,19 @@
 <h2>Diff Example</h2>
 
 <img data-src="diff.png" width="800" class="r-stretch quarto-figure-center"><p class="caption">Diff Example</p></section>
-<section id="we-can-fix-mistakes" class="slide level2">
-<h2>We can fix mistakes</h2>
-
-<img data-src="main-branch-bf6b49a2efd6b2dc9e311e7a666e2b52.png" class="r-stretch"><ul>
-<li class="fragment">What if we made a mistake in code?</li>
-<li class="fragment">We can <strong>roll back</strong> or <strong>revert</strong> changes associated with a commit</li>
+<section id="exercise-create-a-repository-and-make-a-commit" class="slide level2">
+<h2>Exercise: Create a repository and make a commit</h2>
+<p><a href="https://github.com/new" class="uri">https://github.com/new</a></p>
+<ul>
+<li class="fragment">Create README.md</li>
 </ul>
 </section>
-<section id="exercise-look-at-a-commit-history" class="slide level2">
-<h2>Exercise: Look at a commit history</h2>
+<section id="exercise-look-at-a-complex-commit-history" class="slide level2">
+<h2>Exercise: Look at a complex commit history</h2>
 <ul>
 <li class="fragment"><a href="exploring.html">Exploring Github Exercise</a></li>
 </ul>
 </section>
-<section id="more-about-commits" class="slide level2">
-<h2>More about commits</h2>
-<ul>
-<li class="fragment">Commits have a <strong>message</strong></li>
-<li class="fragment">Commits can be done for multiple files at once</li>
-</ul>
-</section>
-<section id="there-is-an-intermediate-step-staging" class="slide level2">
-<h2>There is an intermediate step: staging</h2>
-<ul>
-<li class="fragment">Exists to bundle multiple changes to a single commit</li>
-<li class="fragment">Is hidden in the web interface</li>
-</ul>
-<p><img data-src="staging.png"></p>
-
-<aside><div>
-<p><a href="https://git-scm.com/about/staging-area" class="uri">https://git-scm.com/about/staging-area</a></p>
-</div></aside></section>
 <section id="ways-we-work-in-a-repository" class="slide level2">
 <h2>Ways we work in a repository</h2>
 <ul>
@@ -315,40 +293,6 @@
 <ul>
 <li class="fragment">Everything we’ve done so far we’ve done by ourselves</li>
 <li class="fragment">The key with Git/GitHub is that multiple people can work on a repository at once</li>
-</ul>
-</section>
-<section id="what-is-the-difference-between-git-github" class="slide level2">
-<h2>What is the difference between Git / GitHub?</h2>
-<ul>
-<li class="fragment">Git is the software that does version control
-<ul>
-<li class="fragment">Use it on our own machines with command line git, Git Desktop, RStudio, etc.</li>
-</ul></li>
-<li class="fragment">GitHub is the website that hosts repositories and it uses Git
-<ul>
-<li class="fragment">Hosted repository is also called the <strong>remote</strong></li>
-</ul></li>
-</ul>
-</section>
-<section id="interacting-with-github" class="slide level2">
-<h2>Interacting with GitHub</h2>
-<div class="cell" data-reveal="true" data-layout-align="default">
-<div class="cell-output-display">
-<div>
-<p></p><figure class=""><p></p>
-<div>
-<pre class="mermaid mermaid-js">graph LR
-  A[Our local machine] --git push ---&gt; B
-  B["Remote Repo on GitHub"] --git pull--&gt; A
-</pre>
-</div>
-<p></p></figure><p></p>
-</div>
-</div>
-</div>
-<ul>
-<li class="fragment">Updating the <em>remote</em> from our <em>local</em> is called a <strong>push</strong></li>
-<li class="fragment">Updating the <em>local</em> from the <em>remote</em> is called a <strong>pull</strong></li>
 </ul>
 </section>
 <section id="how-do-we-do-this" class="slide level2">
@@ -381,7 +325,7 @@
 <p><a href="https://docs.google.com/spreadsheets/d/1CeSnF2_6YMJgcZvYDCgYZqk-YINx1cSKkSkBgVSvkwI/edit?gid=0#gid=0">Repository Member List</a></p>
 <p>Everyone is a member of this repository:</p>
 <ul>
-<li class="fragment"><a href="https://github.com/fhdsl/cookbook_summer_2025">cookbook_summer_2025</a></li>
+<li class="fragment"><a href="https://github.com/fhdsl/cookbook_winter_2026">cookbook_winter_2026</a></li>
 </ul>
 <p><a href="branching.html">Exercise: Add a Recipe</a></p>
 </section>
@@ -395,12 +339,6 @@
 <section id="exercise-make-a-pull-request" class="slide level2">
 <h2>Exercise: Make a Pull Request</h2>
 <p><a href="pr.html">Exercise: Make a Pull Request</a></p>
-</section>
-<section id="now-comes-the-hard-part" class="slide level2">
-<h2>Now comes the hard part</h2>
-<ul>
-<li class="fragment">Integrating the changes from multiple branches</li>
-</ul>
 </section>
 <section id="reconciliation-of-branches-merging" class="slide level2">
 <h2>Reconciliation of Branches (merging)</h2>
@@ -441,14 +379,11 @@
 </section>
 <section id="merging-process" class="slide level2">
 <h2>Merging process</h2>
+<p>May involve…</p>
 <ul>
-<li class="fragment">Manual review process
-<ul>
-<li class="fragment">May start a conversation about the pull request</li>
-<li class="fragment">May submit reviews</li>
-<li class="fragment">May submit approvals</li>
-<li class="fragment">May deny the pull request</li>
-</ul></li>
+<li class="fragment"><p>Converse about the Pull Request</p></li>
+<li class="fragment"><p>Participate in Code Reviews</p></li>
+<li class="fragment"><p>Approve or Deny the Pull Request</p></li>
 </ul>
 </section>
 <section>
@@ -510,7 +445,7 @@
   <div class="quarto-auto-generated-content" style="display: none;">
 <p><img src="owl-logo.png" class="slide-logo"></p>
 <div class="footer footer-default">
-<p>https://github.com/fhdsl/cookbook_summer_2025</p>
+<p>https://github.com/fhdsl/cookbook_winter_2026</p>
 </div>
 </div></div>
 
@@ -696,7 +631,7 @@
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -770,13 +705,14 @@
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-            const codeEl = trigger.previousElementSibling.cloneNode(true);
-            for (const childEl of codeEl.children) {
-              if (isCodeAnnotation(childEl)) {
-                childEl.remove();
-              }
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
             }
-            return codeEl.innerText;
+          }
+          return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
