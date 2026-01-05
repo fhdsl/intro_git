@@ -4,7 +4,7 @@ format:
   revealjs:
     link-external-newwindow: true
     incremental: true
-    footer: "https://github.com/fhdsl/cookbook_summer_2025"
+    footer: "https://github.com/fhdsl/cookbook_winter_2026"
 ---
 
 ## Introduce Yourself In Chat
@@ -173,7 +173,7 @@ Git only tracks what's changed between commits (called a **diff**):
 
 Everyone is a member of this repository:
 
--   [cookbook_summer_2025](https://github.com/fhdsl/cookbook_summer_2025)
+-   [cookbook_winter_2026](https://github.com/fhdsl/cookbook_winter_2026)
 
 [Exercise: Add a Recipe](branching.html)
 
@@ -185,10 +185,6 @@ Everyone is a member of this repository:
 ## Exercise: Make a Pull Request
 
 [Exercise: Make a Pull Request](pr.html)
-
-## Now comes the hard part
-
--   Integrating the changes from multiple branches
 
 ## Reconciliation of Branches (merging)
 
@@ -220,7 +216,7 @@ May involve...
 
 -   Converse about the Pull Request
 
--   Particiapte in Code Reviews
+-   Participate in Code Reviews
 
 -   Approve or Deny the Pull Request
 
