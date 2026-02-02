@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.30">
+<meta name="generator" content="quarto-1.8.25">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -26,14 +26,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="branching_files/libs/clipboard/clipboard.min.js"></script>
 <script src="branching_files/libs/quarto-html/quarto.js" type="module"></script>
 <script src="branching_files/libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="branching_files/libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="branching_files/libs/quarto-html/popper.min.js"></script>
 <script src="branching_files/libs/quarto-html/tippy.umd.min.js"></script>
 <script src="branching_files/libs/quarto-html/anchor.min.js"></script>
 <link href="branching_files/libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="branching_files/libs/quarto-html/quarto-syntax-highlighting-dark-4fd6b04df70422679dcc46428c3a52e2.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<link href="branching_files/libs/quarto-html/quarto-syntax-highlighting-c5e9d9f3594ed809ed9af2d0d863e062.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="branching_files/libs/quarto-html/quarto-syntax-highlighting-dark-1fdc6c3d8b5c175655f51fcdb32f5d41.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="branching_files/libs/quarto-html/quarto-syntax-highlighting-c5e9d9f3594ed809ed9af2d0d863e062.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="branching_files/libs/bootstrap/bootstrap.min.js"></script>
 <link href="branching_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="branching_files/libs/bootstrap/bootstrap-54cf135cfe02744c679a308d7dd506c5.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="dark">
+<link href="branching_files/libs/bootstrap/bootstrap-ee950b10d023668d34c4f25cf196c797.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="dark">
+<link href="branching_files/libs/bootstrap/bootstrap-dark-ee950b10d023668d34c4f25cf196c797.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="branching_files/libs/bootstrap/bootstrap-ee950b10d023668d34c4f25cf196c797.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="dark">
 
 
 </head>
@@ -151,13 +156,14 @@ ul.task-list li input[type="checkbox"] {
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
