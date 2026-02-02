@@ -11,7 +11,7 @@ format:
 
 -   GitHub: [sign up for an account ](https://github.com/signup "https://github.com/signup")if you don't have one yet,
 
--   Then [enter your GitHub username here in the spreadsheet](#0 "https://docs.google.com/spreadsheets/d/1vqrPd-0sga4STNJb2dW7ylnv_8aSQrsKEHpBtysDSzY/edit?gid=0#gid=0")
+-   Then [enter your GitHub username here in the spreadsheet](https://docs.google.com/spreadsheets/d/1vqrPd-0sga4STNJb2dW7ylnv_8aSQrsKEHpBtysDSzY/edit?gid=0#gid=0)
 
 -   If you are all set, find a recipe that you can cut and paste as text (yes, for food or drinks) to share -- doesn't have to be yours! It's for a fun little exercise today.
 
