@@ -7,10 +7,19 @@ format:
     footer: "https://github.com/fhdsl/cookbook_winter_2026"
 ---
 
+## Welcome!
+
+-   GitHub: [sign up for an account ](https://github.com/signup "https://github.com/signup")if you don\'t have one yet,
+
+-   Then [enter your GitHub username here in the spreadsheet](#0 "https://docs.google.com/spreadsheets/d/1vqrPd-0sga4STNJb2dW7ylnv_8aSQrsKEHpBtysDSzY/edit?gid=0#gid=0")
+
+-   If you are all set, find a recipe that you can cut and paste as text (yes, for food or drinks) to share -- doesn\'t have to be yours! It's for a fun little exercise today.
+
 ## Introduce Yourself In Chat
 
 -   Your Name/Group/Pronouns
 -   What you hope to learn today
+-   What's something delicious you have cooked or eaten lately?
 
 ## Who is this workshop for?
 
@@ -18,33 +27,9 @@ format:
 -   Those who want to understand how open source collaboration works
 -   Those who need to build a mental model of Git
 
-. . .
-
-Not for:
-
--   People who already use Git on the command line (you already have the mental model)
--   Impatient people
-
-## Learning Objectives
-
-By the end of this workshop, you will be able to:
-
--   **Explain** the reasons we use repositories
--   **Explain** how version control tracks changes in your work
--   **Make** a branch in a repository
--   **Make** contributions to a repository using pull requests
--   (If time) **Make** a fork of a repository that you don't own
-
-## Reminder: Be gentle with yourself and others
-
--   [Participation Guidelines](https://hutchdatascience.org/communitystudios/guidelines/)
--   We are all learning together
--   We all learn at different paces
--   Asking questions is a way of taking care of others
-
 ## Our focus today is on concepts
 
--   Intermediate Git is much more about how you do it
+-   Intermediate Git is much more about how you do it with the Command Line
 
 ## Reproducibility and the Research Lifecycle
 
@@ -54,31 +39,14 @@ By the end of this workshop, you will be able to:
 [The Turing Way Community](https://doi.org/10.5281/ZENODO.3332807)
 :::
 
-## Benefits of Storing your code in a Repo
+## What is a Repository?
 
--   Centralized code
--   Other people outside your lab can use it
--   The ability to roll back changes that broke your code
+-   Centralized files in a folder
+-   The ability to look back in time (version control)
+-   Other people can use it
 -   Recognition for your work
--   Supportive community that can help you learn and improve it
 
-## It's Tough being Open
-
-![](make-ok-to-be-human-adfed37c7f9fe42485a1e3e6ad869a2b.png){width="700"}
-
-::: aside
-[Scientific Data in 2017. Used under a CC-BY 4.0 license](https://doi.org/10.6084/M9.FIGSHARE.5577340.V1)
-:::
-
-## But it's also rewarding
-
-![](help-you-of-the-futu-1d37c78e2b60bc56e20c20be250182b5.png){width="700"}
-
-::: aside
-[Scientific Data in 2017. Used under a CC-BY 4.0 license](https://doi.org/10.6084/M9.FIGSHARE.5577340.V1)
-:::
-
-## Version Control
+## What is Version Control?
 
 > Version control is a systematic approach to record changes made in a file, or set of files, over time. This allows you and your collaborators to track the history, see what changed, and recall specific versions later when needed.
 
@@ -94,10 +62,10 @@ By the end of this workshop, you will be able to:
 
 ## Version Control Workflow (by ourselves)
 
-1.  Create files - these may contain text, code or both.
+1.  Create files in a repository.
 2.  Work on these files, by changing, deleting or adding new content.
-3.  Create a snapshot of the file status (also known as version) at this time.
-4.  Document what was changed in the version history of that file.
+3.  Create a snapshot, aka **commit**, of the repository at this time.
+    -   User, time, difference compared to last commit, documentation
 
 ::: aside
 [The Turing Way](https://book.the-turing-way.org/reproducible-research/vcs/vcs-workflow)
@@ -109,9 +77,7 @@ By the end of this workshop, you will be able to:
 
 ## Git is a formal way of tracking changes
 
--   Each "save" is called a **commit**
--   Basically a snapshot of the file at that moment in time
--   We have one file, but many versions of that file
+-   Each version is called a **commit**
 -   We only track changes in the file, not save the entire file
 -   We can **revert** changes associated with a commit
 
@@ -153,7 +119,7 @@ Git only tracks what's changed between commits (called a **diff**):
 
 -   Multiple people can work on their own versions of the code called **branches**
 -   Developers can work on different features on the same code
--   Needs a reconciliation process (pull requests/merging)
+-   Needs a reconciliation process (**merging** via Pull Requests)
 
 ## Branches are isolated versions of the original repository
 
@@ -161,17 +127,11 @@ Git only tracks what's changed between commits (called a **diff**):
 
 ## Many People Can Work on the Same Code
 
--   Working on different branches
-
 ![](sub-branch-591cc047cf4f699fc4652eae25e2745d.png)
-
-## When in doubt, branch
-
--   Before you make big changes, make a branch
 
 ## Exercise: Add a Recipe to our Cookbook Repository!
 
-[Repository Member List](https://docs.google.com/spreadsheets/d/1CeSnF2_6YMJgcZvYDCgYZqk-YINx1cSKkSkBgVSvkwI/edit?gid=0#gid=0)
+[Repository Member List](https://docs.google.com/spreadsheets/d/1vqrPd-0sga4STNJb2dW7ylnv_8aSQrsKEHpBtysDSzY/edit?gid=0#gid=0)
 
 Everyone is a member of this repository:
 
@@ -181,14 +141,16 @@ Everyone is a member of this repository:
 
 ## Make a Pull Request
 
--   A **pull request** is a formal request to merge your code changes into the history
--   Someone (the owner) needs to merge your changes after a request
+-   We are going to **merge** your code changes into the parent branch.
+    -   Usually the **main branch**.
+-   This requires careful communication. A **pull request** is the communication channel.
+-   After a **pull request** is made, someone looks over and decides whether to **merge.**
 
 ## Exercise: Make a Pull Request
 
 [Exercise: Make a Pull Request](pr.html)
 
-## Reconciliation of Branches (merging)
+## Merging...
 
 ![](one-branch-9bf2286640c44169cd8255c9d4264780.png)
 
@@ -198,29 +160,28 @@ Everyone is a member of this repository:
 ## Who's responsible for merging?
 
 -   Repository Owner
-    -   Could be *program manager* of a group
-    -   Could be a *software engineer*
--   It is a big responsibility
+    -   Could be project manager of a group...
+    -   Could be a software engineer...
+    -   Could be a collaborator...
+    -   Depends on a lot of context!
+
+## Who's responsible for merging?
+
+-   It is an important responsibility
+
+    -   Check for any possible **conflicts** that may arise and address them
+
+    ```{=html}
+    <!-- -->
+    ```
     -   Need to ensure that merge doesn't break things
         -   Use automated testing to ensure changes don't break code
-    -   Need to make sure that merges don't conflict
-        -   Reconciling changes so that they work together
 
-## Branching/Merging works because of communication
+## This is all dependent on communication
 
 -   You need to communicate with other developers which part of the code you're working on
 -   Partition out the tasks
 -   Multiple developers working on the same part of the code can be difficult
-
-## Merging process
-
-May involve...
-
--   Converse about the Pull Request
-
--   Participate in Code Reviews
-
--   Approve or Deny the Pull Request
 
 # Merging Demo
 
@@ -255,7 +216,19 @@ Hopefully you will now be able to
 -   **Make** contributions to a repository using pull requests
 -   **Make** a fork of a repository that you don't own
 
-## Resources
+## What's next?
+
+-   [Intermediate Git and GitHub(\*)](https://ocdo.fredhutch.org/dasl/courses/intermediate-git/): Feb 9, 2026 (1.5 hour workshop)
+
+-   [Making Code Ready for Publication(\*)](https://ocdo.fredhutch.org/dasl/courses/making-code-ready/): Feb 23, 2026 (1.5 hour workshop)
+
+-   [Package Management for R and Python(\*)](https://ocdo.fredhutch.org/dasl/courses/package-management/): March 9, 2026 (1.5 hour workshop)
+
+## Feedback for today
+
+<https://forms.gle/LvwjCsyaKmbDaNhA8>
+
+## Additional Resources
 
 -   [How Git Works](https://wizardzines.com/zines/git/)
 -   [Happy Git With R](https://happygitwithr.com/)
